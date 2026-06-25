@@ -1,0 +1,38 @@
+# BSD 3-Clause License
+
+Copyright (c) 2025, Technical University of Munich (TUM)
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+---
+
+## Additional Academic Requirements
+
+The following academic-use conditions supplement the BSD 3-Clause License above. These conditions apply **only to academic and research use** and do not alter BSD's permissions for general open-source use:
+
+4. **Proper Citation**
+   Any academic publication, thesis, or report using this software must include citations to both the original C++ library and the TUMKIN translation:
+
+   * *Anton Zizin, Phd. Thesis, DLR.* 
+   * *Alvaro Piccini, Technical University of Munich*
+   * *Amelie Dimke, Technical University of Munich*
+   * *Sascha Märtin, Technical University of Munich*
+
+5. **Attribution of Modifications**
+   Significant modifications in academic work must be documented, and derivative academic uses must acknowledge these changes.
+
+6. **Non-Commercial Clarification for Research Contexts**
+   Although BSD allows commercial use, users applying this software in **commercial or industry research projects** are encouraged to contact the authors or TUM for potential collaboration or licensing discussions.
+
+---
+
+## Disclaimer
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
