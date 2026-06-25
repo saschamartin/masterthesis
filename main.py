@@ -28,7 +28,7 @@ def optimizer(
         POP_SIZE=28,
         NGEN=500,
         ELITE_SIZE=5,
-        early_stop_gen=50,
+        early_stop_gen=100,
         fixed_components=components  # Fixe Components
     )
 
