@@ -15,7 +15,9 @@ def optimizer(
     linear_props: list = None,
     target_fuel_properties: dict = None,
     group_map: dict = None,
-    group_limits: dict = None):
+    group_limits: dict = None,
+    NGEN: int = 100,
+    early_stop_gen: int = 10):
 
     validate_inputs("NSGA_III",physicalDatabank_path,number_components,components,ratios,linear_props,target_fuel_properties, group_map, group_limits)
     df = pd.read_csv(physicalDatabank_path)
@@ -34,6 +36,21 @@ def optimizer(
     )
 
 def userinput(physicalDatabank_path,group_map):
+    def generation():
+        print("========== Algorithm Control ==========")
+        print("Recommended: numberGenerations=100; earlyStopGen= 10-20")
+        print("=======================================")
+        print("Please choose the wanted number of generations")
+        NGEN = input("> ")
+        print("Please choose the number of stagnant generations before early stop")
+        while True:
+            early_stop_gen = input("> ")
+            if early_stop_gen > NGEN:
+                print(f"Please choose a value which is maximum {NGEN}")
+            else:
+                break
+        return NGEN, early_stop_gen
+    
     invertet_map = {val: key for key, values in group_map.items() for val in values}
     group_limits = {
         "Paraffin": (0.0,0.0),
@@ -91,7 +108,8 @@ def userinput(physicalDatabank_path,group_map):
         fixed = int(input("> "))
         if fixed == 0:
             components = None
-            return number_components, components, group_limits
+            NGEN, early_stop_gen = generation()
+            return number_components, components, group_limits, NGEN, early_stop_gen
         elif fixed < len(required):
             print("Please add more fixed components")
         else:
@@ -124,7 +142,8 @@ def userinput(physicalDatabank_path,group_map):
         else: 
             break
 
-    return number_components, components, group_limits
+    NGEN, early_stop_gen = generation()
+    return number_components, components, group_limits, NGEN, early_stop_gen
 
 if __name__ == "__main__":
     physicalDatabank_path = "Data/physDatabank.csv"
@@ -133,7 +152,7 @@ if __name__ == "__main__":
     expPDCurve = "Data/2PD/JetA-Phasediagram.csv"
     
     target_fuel_properties, group_map, _ = loadreference(expDistCurve,expPDCurve)
-    number_components, components, group_limits = userinput(physicalDatabank_path, group_map)
+    number_components, components, group_limits, NGEN, early_stop_gen = userinput(physicalDatabank_path, group_map)
 
     # number_components = 5
     # components = ["n-Propyl-Cyclohexane","Iso-Octane","n-Dodecane","1-Methyl-Naphthalene","n-Hexadecane"]
@@ -152,6 +171,8 @@ if __name__ == "__main__":
         target_fuel_properties=target_fuel_properties,
         group_map=group_map, 
         group_limits=group_limits,
+        NGEN=NGEN,
+        early_stop_gen=early_stop_gen,
         )
     except ValueError as e:
         import traceback,sys
