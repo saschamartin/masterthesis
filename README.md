@@ -12,8 +12,8 @@ This project is structured in 3 parts.
 
 The module **Additive Characteristics** was developed in Python by Amelie Dimke as part of her M.Sc. Aerospace Engineering studies. The **Phase Behaviour** modules were developed in Fortran by Dr. Anton Zizin as part of his PhD at the German Aerospace Center and translated by Alvaro Piccini has part of his B.Sc. Aerospace Engineering studies. The optimization loop was constructed as a Master thesis by Sascha Märtin as part of his studies of Aerospace Engineering. 
 
-```
 ## Requirements
+```
 - python >3.7
 - numpy
 - deap
