@@ -1,11 +1,9 @@
-import sys
 import numpy as np
 import random
-from scipy.optimize import minimize
-import matplotlib.pyplot as plt
-from utils.properties import calculate_mixture_properties
-from utils.setup import (prepare_eval_data,prepare_pd_data,get_required_groups)
-sys.path.append("C:/Users/Skulleton/Documents/#Uni/#Masterthesis/Code/phase/DistillationCurve/distillation")
+# from scipy.optimize import minimize
+# import matplotlib.pyplot as plt
+from utensils.properties import calculate_mixture_properties
+from utensils.setup import (prepare_eval_data,prepare_pd_data,get_required_groups)
 from distillation import run as run_dist
 from two_phase_lib import run as run_PD
 

@@ -1,7 +1,7 @@
-from utils.setup import (prepare_pd_data)
-from utils.utils import (calculate_dist,
+from utensils.setup import (prepare_pd_data)
+from utensils.utils import (calculate_dist,
                          calculate_PD)
-from utils.properties import (calculate_mixture_properties)
+from utensils.properties import (calculate_mixture_properties)
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib

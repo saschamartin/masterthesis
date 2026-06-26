@@ -4,17 +4,17 @@ import time, random, multiprocessing
 import numpy as np
 from functools import partial
 from deap import base, tools, creator
-from utils.output import (export_figure_dist,
+from utensils.output import (export_figure_dist,
                           export_figure_PD,
                           print_final_results,
                           plot_convergence,)
 # from populating import pop_init
-from utils.utils import (fitness_function,
+from utensils.utils import (fitness_function,
                         crossover,
                         mutate,
                         adaptive_parameters,
                         selectBest)
-from utils.setup import (get_components_by_group,
+from utensils.setup import (get_components_by_group,
                         precompute_group_indices,
                         get_required_groups,
                         pop_init,

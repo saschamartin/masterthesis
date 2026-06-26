@@ -1,9 +1,10 @@
 import sys
-sys.path.insert(0, "./NSGA/utils")
+sys.path.insert(0, "./utensils")
+sys.path.append("./phase/DistillationCurve/distillation")
 import pandas as pd
 from algorithms import NSGA_algo
 from deap import base, tools, algorithms
-from utils.setup import (loadreference, validate_inputs)
+from utensils.setup import (loadreference, validate_inputs)
 
 
 def optimizer(
@@ -88,7 +89,10 @@ def userinput(physicalDatabank_path,group_map):
     while True:
         print("Define the number of fixed componentes.")
         fixed = int(input("> "))
-        if fixed < len(required):
+        if fixed == 0:
+            components = None
+            return number_components, components, group_limits
+        elif fixed < len(required):
             print("Please add more fixed components")
         else:
             break

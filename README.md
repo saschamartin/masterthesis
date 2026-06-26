@@ -57,3 +57,7 @@ If you use this library in academic work, please cite:
 - **Amelie Dimke** — Additive Properties (TUM,2025)
 - **Sascha Märtin** — Optimization Loop (TUM, 2026)
 - **Dr. Slavinskaya** - Supervision
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

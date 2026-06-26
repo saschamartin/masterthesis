@@ -4,7 +4,7 @@ from numpy import random
 import random
 from sklearn.neighbors import NearestNeighbors
 # from properties import calculate_mixture_properties
-sys.path.append("C:/Users/sp-ma/Documents/Studium/#Masterarbeit/Code/phase/DistillationCurve/distillation")
+# sys.path.append("C:/Users/sp-ma/Documents/Studium/#Masterarbeit/Code/phase/DistillationCurve/distillation")
 
 def loadreference(path_dist,path_PD):
     '''
